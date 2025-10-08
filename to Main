@@ -1,0 +1,20 @@
+🧠 Key Features
+Feature	Description
+Instant setup	Start coding without manually installing dependencies — Codespaces uses devcontainer.json to auto-configure your environment.
+VS Code integration	Works seamlessly in the browser or in your local VS Code app.
+Terminal access	Full Linux shell with bash, git, npm, python, etc.
+Prebuilt environments	Use Docker or container specs to define system dependencies.
+Persistent storage	Your workspace is saved even when you close the browser.
+Port forwarding	Preview web apps directly from your running codespace.
+{
+  "name": "My Project Codespace",
+  "image": "mcr.microsoft.com/vscode/devcontainers/python:3.11",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    }
+  },
+  "postCreateCommand": "pip install -r requirements.txt"
+}
+
+
