@@ -1,0 +1,52 @@
+Start from the main branch
+
+git checkout main
+git pull origin main
+
+
+Create a hotfix branch
+
+git checkout -b hotfix/issue-name
+
+
+Example:
+
+git checkout -b hotfix/login-bug
+
+
+Make your changes and commit
+
+git add .
+git commit -m "Fix: resolved login token validation bug"
+
+
+Push the branch to GitHub
+
+git push origin hotfix/login-bug
+
+
+Open a Pull Request (PR)
+
+Go to your GitHub repository → “Pull requests” tab → “New pull request”.
+
+Compare hotfix/login-bug → main.
+
+Add reviewers and a clear description (what issue it fixes).
+
+After review, merge and delete the branch
+
+git checkout main
+git pull origin main
+git merge hotfix/login-bug
+git push origin main
+git branch -d hotfix/login-bug
+
+🧠 Best Practices
+
+Prefix hotfix branches with hotfix/
+
+Keep them small and focused on one urgent issue
+
+Merge directly into main (and back into develop if using Git Flow)
+
+Tag the release after merging (e.g., v2.3.1)
